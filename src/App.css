@@ -27,6 +27,21 @@
 .App-link {
   color: #61dafb;
 }
+.emailform {
+  width:200px;
+  height:30px;
+  margin-top:2%;
+}
+
+.submitbutton{
+  width:60px;
+  height:30px;
+  margin-top:2%;
+}
+.submitbutton:hover {
+  background-color: #61dafb;
+
+}
 
 @keyframes App-logo-spin {
   from {
