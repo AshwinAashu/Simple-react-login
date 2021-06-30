@@ -35,29 +35,26 @@ class Login extends Component {
             user : this.state.email,
             password: this.state.pasw, 
         }
-        
+        //get response from the backend server  
         axios.get(`http://localhost:9090/api/credential/get?username=${LOCAL_DATA.user}`)
         .then(res => {
             if(LOCAL_DATA.password === res.data.password){
                 //set loggedin to true
                 this.setState({loggedIn: true});
-               
+                this.props.history.push(`/profile/${LOCAL_DATA.user}`);
+            
             }
             else alert("Email or password incorrect");
         
         })
         .catch((e)=> console.log(e));
 
-        <Route>
-            {this.state.loggedIn ? <Redirect to="/profile"  /> : <Login/>}
-        </Route>
+        
     
     }
 
 
     render(){
-        
-        
         return(
             <div>
                 <h1>Login to continue</h1>
