@@ -1,21 +1,27 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
-const LandingPage = () =>{
 
-    
-    const logoutHandler=(event)=>{
+ const LandingPage = (props) =>{
+    const userState = props.location.state;
+    // const isLoggedIn = props.location.state.isLoggedIn;
+    const handleLogout=(event, props)=>{
         event.preventDefault();
-        this.setState({loggedIn})
-        this.props.history.push('/');
+        console.log(userState.state.isLoggedIn);
     }
+   
 
+   
 
-
-    return <div>
-        <h1> Login Successful </h1>
-        <button onClick= {this.logoutHandler}>Logout</button>
-    </div>
+        return (
+            <div>
+                <h1> Login Successful {userState.state.user} </h1>
+                {/* {console.log(props)} */}
+                <button onClick =  {handleLogout} >Logout</button>
+             </div>
+        )
+    
+   
 }
 
-export  default LandingPage
+export  default LandingPage;

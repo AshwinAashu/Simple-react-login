@@ -1,17 +1,20 @@
 import React, { Component} from 'react';
 import  axios from 'axios';
-import { Route, Redirect } from 'react-router';
+// import { Route, Redirect } from 'react-router';
 // import LandingPage from './LandingPage';
+import AuthenticateUser from './AuthenticateUser';
 
 class Login extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             email: "",
             pasw : "",
             loggedIn :  false,
         }
-        // this.setState =  this.setState.bind(this);
+       this.emailHandler =  this.emailHandler.bind(this);
+       this.pswHandler =  this.pswHandler.bind(this);
+       this.submitHandler = this.submitHandler.bind(this);
     }
 
     emailHandler=(e)=>{
@@ -41,8 +44,8 @@ class Login extends Component {
             if(LOCAL_DATA.password === res.data.password){
                 //set loggedin to true
                 this.setState({loggedIn: true});
-                this.props.history.push(`/profile/${LOCAL_DATA.user}`);
-            
+                this.props.history.push( `/profile/${LOCAL_DATA.user}`, {state : {user: LOCAL_DATA.user, isLoggedIn: this.state.loggedIn }});
+                AuthenticateUser.registerUser(LOCAL_DATA.user, LOCAL_DATA.password);
             }
             else alert("Email or password incorrect");
         

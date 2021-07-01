@@ -17,7 +17,13 @@ function App() {
           <Route exact path="/" component={Login}/>
    
         
-          <Route  path="/profile/:name" exact component={LandingPage}/>
+          <Route 
+           path="/profile/:name" 
+           render= {(props)=> (
+             <LandingPage {...props}  />
+           )}/>
+           
+           {/* <Route exact path="/profile/:name" component={LandingPage}/> */}
 
           </Switch>
         </Router>
