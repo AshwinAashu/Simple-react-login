@@ -1,5 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router';
+import AuthenticateUser from './AuthenticateUser';
 
 
  const LandingPage = (props) =>{
@@ -9,6 +10,7 @@ import {useHistory} from 'react-router';
     const handleLogout=(event)=>{   
         event.preventDefault();
         //re-route to login page and set loggedIn to false
+        AuthenticateUser.logout();
         history.push(`/`, {state:{loggedIn: !userState.state.isLoggedIn}});
 
     }
