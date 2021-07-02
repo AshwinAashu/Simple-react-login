@@ -1,13 +1,16 @@
 import React from 'react';
-
+import {useHistory} from 'react-router';
 
 
  const LandingPage = (props) =>{
     const userState = props.location.state;
-    // const isLoggedIn = props.location.state.isLoggedIn;
-    const handleLogout=(event, props)=>{
+    const history = useHistory();
+  
+    const handleLogout=(event)=>{   
         event.preventDefault();
-        console.log(userState.state.isLoggedIn);
+        //re-route to login page and set loggedIn to false
+        history.push(`/`, {state:{loggedIn: !userState.state.isLoggedIn}});
+
     }
    
 
@@ -16,7 +19,6 @@ import React from 'react';
         return (
             <div>
                 <h1> Login Successful {userState.state.user} </h1>
-                {/* {console.log(props)} */}
                 <button onClick =  {handleLogout} >Logout</button>
              </div>
         )

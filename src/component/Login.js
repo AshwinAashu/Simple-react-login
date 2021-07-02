@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
 import  axios from 'axios';
-// import { Route, Redirect } from 'react-router';
-// import LandingPage from './LandingPage';
 import AuthenticateUser from './AuthenticateUser';
 
 class Login extends Component {
@@ -60,6 +58,7 @@ class Login extends Component {
     render(){
         return(
             <div>
+               
                 <h1>Login to continue</h1>
                 <form onSubmit = {this.submitHandler}>
                     <input onChange = { this.emailHandler } type="email" value={this.state.email} className="emailform" placeholder="abc@xyz.com"/>  <br/>

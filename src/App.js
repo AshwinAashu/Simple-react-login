@@ -23,7 +23,7 @@ function App() {
              <LandingPage {...props}  />
            )}/>
            
-           {/* <Route exact path="/profile/:name" component={LandingPage}/> */}
+          
 
           </Switch>
         </Router>
