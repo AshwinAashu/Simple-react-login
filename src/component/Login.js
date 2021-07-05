@@ -24,11 +24,7 @@ class Login extends Component {
         this.setState({email : e.target.value});
     }
 
-    registerNewUser = (e) =>{
-        e.preventDefault();
-        this.props.history.push('/register');
-    }
-
+    
     pswHandler = (e) =>{
         e.preventDefault();
         this.setState({pasw : e.target.value});
@@ -65,7 +61,9 @@ class Login extends Component {
                     <input onChange = {this.pswHandler} type="password" name="password" className="emailform" value={this.state.pasw} placeholder="Password"/> <br/>
                     <input type="submit" className="submitbutton" value="LogIn"/>
                 </form>
-                <span><h3> New here? </h3> <button onClick={this.registerNewUser} >Register now</button></span>
+                
+                <p><a href="/register">Register</a> new user</p><br/>
+                <p>Forgot password? <a href="/reset">reset password</a></p>
             </div>
         )
     }
