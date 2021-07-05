@@ -12,7 +12,6 @@ import AuthenticateUser from './AuthenticateUser';
         //re-route to login page and set loggedIn to false
         AuthenticateUser.logout();
         history.push(`/`, {state:{loggedIn: !userState.state.isLoggedIn}});
-
     }
    
 

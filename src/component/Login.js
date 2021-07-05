@@ -9,7 +9,6 @@ class Login extends Component {
             email: "",
             pasw : "",
             loggedIn :  false,
-            
         }
        this.emailHandler =  this.emailHandler.bind(this);
        this.pswHandler =  this.pswHandler.bind(this);
@@ -53,12 +52,9 @@ class Login extends Component {
                 AuthenticateUser.registerUser(LOCAL_DATA.user, LOCAL_DATA.password);
             }
             else alert("Email or password incorrect");
-        
         })
         .catch((e)=> console.log(e));
     }
-
-
     render(){
         return(
             <div>
