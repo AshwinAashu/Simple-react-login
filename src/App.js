@@ -4,6 +4,7 @@ import Login from './component/Login';
 import LandingPage from './component/LandingPage';
 import {BrowserRouter as Router, Route, Switch }  from 'react-router-dom';
 import Register from './component/Register';
+import Reset from './component/Reset';
 
 
 
@@ -26,6 +27,7 @@ function App() {
              <LandingPage {...props}  />
            )}/>
            
+          <Route exact path="/reset" component={Reset}/>
           
 
           </Switch>
