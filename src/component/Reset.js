@@ -63,8 +63,11 @@ export default function Reset(props){
                 <input type="password" value ={props.pasw2} className = "emailform" onChange={Password2Handler}/><br/><br/>
                 <input type="submit" className="submitbutton" value="Reset"/>
                 
+                
             </form>
         </fieldset>
+                <br/><br/>
+                <span><a href="/">Log In</a> instead</span>
         </div>
     )
 } 
