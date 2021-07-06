@@ -13,7 +13,11 @@ class AuthenticateUser{
 
     verifyEmail(user){
         //verify if an email ID exists 
-        // axios.get(`http://localhost:9090/api/credential/get?username=${user}`)
+        let userExists = axios.get(`http://localhost:9090/api/credential/get?username=${user}`)
+                            .then(res=> res.status === 200? true : false)
+                            .catch(e=> console.log(e));
+     
+        return userExists;
     }
 
     
