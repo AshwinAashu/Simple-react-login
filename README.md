@@ -10,7 +10,7 @@ Some key highlights here :
 
   
  Screenshots:
-  <img src="screenshots/login"/>
-  <img src="screenshots/landingpage"/>
-  <img src="screenshots/register"/>
-  <img src="screenshots/reset"/>
+  <img src="./screenshots/login"/>
+  <img src="./screenshots/landingpage"/>
+  <img src="./screenshots/register"/>
+  <img src="./screenshots/reset"/>
