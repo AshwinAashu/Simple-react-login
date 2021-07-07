@@ -14,3 +14,14 @@ Some key highlights here :
   <img src="./screenshots/landingpage.png"/>
   <img src="./screenshots/register.png"/>
   <img src="./screenshots/reset.png"/>
+
+
+
+Things I learnt from this mini project :
+- Basics of Spring MVC and Springboot 
+- Understanding and using spring initializer 
+- Basics of MongoDB 
+- Basic Implementation of MVC architecture 
+- Connecting Springboot to MongoDB 
+- Using Postman to perform basic api testing
+- Using Axios to implement HTTP requests from the frontend to the backend
